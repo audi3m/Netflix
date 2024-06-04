@@ -13,6 +13,9 @@
 		D4F2B76B2C0F57D000F575C2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D4F2B76A2C0F57D000F575C2 /* Base */; };
 		D4F2B76D2C0F57D100F575C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F2B76C2C0F57D100F575C2 /* Assets.xcassets */; };
 		D4F2B7702C0F57D100F575C2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D4F2B76F2C0F57D100F575C2 /* Base */; };
+		D4F2B77B2C0F580900F575C2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2B77A2C0F580900F575C2 /* SignInViewController.swift */; };
+		D4F2B77E2C0F59CD00F575C2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D4F2B77D2C0F59CD00F575C2 /* SnapKit */; };
+		D4F2B7802C0F5BCC00F575C2 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F2B77F2C0F5BCC00F575C2 /* UIImage+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		D4F2B76C2C0F57D100F575C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4F2B76F2C0F57D100F575C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4F2B7712C0F57D100F575C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4F2B77A2C0F580900F575C2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D4F2B77F2C0F5BCC00F575C2 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F2B77E2C0F59CD00F575C2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +65,22 @@
 				D4F2B7632C0F57D000F575C2 /* AppDelegate.swift */,
 				D4F2B7652C0F57D000F575C2 /* SceneDelegate.swift */,
 				D4F2B7672C0F57D000F575C2 /* ViewController.swift */,
+				D4F2B77A2C0F580900F575C2 /* SignInViewController.swift */,
+				D4F2B7772C0F57E100F575C2 /* Extensions */,
 				D4F2B7692C0F57D000F575C2 /* Main.storyboard */,
 				D4F2B76C2C0F57D100F575C2 /* Assets.xcassets */,
 				D4F2B76E2C0F57D100F575C2 /* LaunchScreen.storyboard */,
 				D4F2B7712C0F57D100F575C2 /* Info.plist */,
 			);
 			path = Netflix;
+			sourceTree = "<group>";
+		};
+		D4F2B7772C0F57E100F575C2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4F2B77F2C0F5BCC00F575C2 /* UIImage+Ex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +99,9 @@
 			dependencies = (
 			);
 			name = Netflix;
+			packageProductDependencies = (
+				D4F2B77D2C0F59CD00F575C2 /* SnapKit */,
+			);
 			productName = Netflix;
 			productReference = D4F2B7602C0F57D000F575C2 /* Netflix.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = D4F2B7572C0F57D000F575C2;
+			packageReferences = (
+				D4F2B77C2C0F59CD00F575C2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D4F2B7612C0F57D000F575C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F2B77B2C0F580900F575C2 /* SignInViewController.swift in Sources */,
 				D4F2B7682C0F57D000F575C2 /* ViewController.swift in Sources */,
 				D4F2B7642C0F57D000F575C2 /* AppDelegate.swift in Sources */,
 				D4F2B7662C0F57D000F575C2 /* SceneDelegate.swift in Sources */,
+				D4F2B7802C0F5BCC00F575C2 /* UIImage+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +322,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +332,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ray.Netflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,8 +355,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +365,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ray.Netflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4F2B77C2C0F59CD00F575C2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4F2B77D2C0F59CD00F575C2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4F2B77C2C0F59CD00F575C2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D4F2B7582C0F57D000F575C2 /* Project object */;
 }
